@@ -19,7 +19,7 @@ To use this module, you should have Terraform installed and configured for AWS. 
 
 ```hcl
 module "s3_bucket" {
-  source      = "git::https://github.com/shanav-tech/terraform-aws-s3.git?ref=v1.0.0"
+  source      = "git::https://github.com/Shanav-Technologies/terraform-aws-s3.git?ref=v1.0.0"
   name        = "test-secure-bucket"
   environment = local.environment
   label_order = local.label_order
@@ -32,7 +32,7 @@ module "s3_bucket" {
 ## Example: s3 complete
 ```hcl
 module "s3_bucket" {
-  source      = "git::https://github.com/shanav-tech/terraform-aws-s3.git?ref=v1.0.0"
+  source      = "git::https://github.com/Shanav-Technologies/terraform-aws-s3.git?ref=v1.0.0"
   name        = "arcx-13"
   environment = local.environment
   label_order = local.label_order
@@ -221,7 +221,7 @@ module "s3_bucket" {
 
 ```hcl
 module "s3_bucket" {
-  source      = "git::https://github.com/shanav-tech/terraform-aws-s3.git?ref=v1.0.0"
+  source      = "git::https://github.com/Shanav-Technologies/terraform-aws-s3.git?ref=v1.0.0"
   name        = "test-secure-bucket"
   environment = local.environment
   label_order = local.label_order
@@ -243,7 +243,7 @@ module "s3_bucket" {
 
 ```hcl
 module "s3_bucket" {
-  source      = "git::https://github.com/shanav-tech/terraform-aws-s3.git?ref=v1.0.0"
+  source      = "git::https://github.com/Shanav-Technologies/terraform-aws-s3.git?ref=v1.0.0"
   name        = "test-encryption-bucket"
   s3_name     = "dmzx"
   environment = local.environment
@@ -260,7 +260,7 @@ module "s3_bucket" {
 
 ```hcl
 module "s3_bucket" {
-source        = "git::https://github.com/shanav-tech/terraform-aws-s3.git?ref=v1.0.0"
+source        = "git::https://github.com/Shanav-Technologies/terraform-aws-s3.git?ref=v1.0.0"
 name          = "test-logging-bucket"
 s3_name       = "wewrrt"
 environment   = local.environment
@@ -277,7 +277,7 @@ depends_on    = [module.logging_bucket]
 
 ```hcl
 module "s3_bucket" {
-  source      = "git::https://github.com/shanav-tech/terraform-aws-s3.git?ref=v1.0.0"
+  source      = "git::https://github.com/Shanav-Technologies/terraform-aws-s3.git?ref=v1.0.0"
   name        = "test-logging-encryption-bucket"
   s3_name     = "aqua"
   environment = local.environment
@@ -299,7 +299,7 @@ module "s3_bucket" {
 
 ```hcl
 module "s3_bucket" {
-  source      = "git::https://github.com/shanav-tech/terraform-aws-s3.git?ref=v1.0.0"
+  source      = "git::https://github.com/Shanav-Technologies/terraform-aws-s3.git?ref=v1.0.0"
   name        = "test-s3"
   s3_name     = "poxord"
   environment = local.environment
@@ -392,13 +392,13 @@ module "s3_bucket" {
 
 
 ## Examples
-For detailed examples on how to use this module, please refer to the [examples](https://github.com/shanav-tech/terraform-aws-s3/tree/master/_examples) directory within this repository.
+For detailed examples on how to use this module, please refer to the [examples](https://github.com/Shanav-Technologies/terraform-aws-s3/tree/master/_examples) directory within this repository.
 
 ## Author
 Your Name Replace '[License Name]' and '[Your Name]' with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/shanav-tech/terraform-aws-s3/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Shanav-Technologies/terraform-aws-s3/blob/master/LICENSE) file for details.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
@@ -406,47 +406,47 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.8.5 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.50.0 |
-| <a name="requirement_tls"></a> [tls](#requirement\_tls) | >= 4.0.4 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 6.5.0 |
+| <a name="requirement_tls"></a> [tls](#requirement\_tls) | 4.1.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 5.50.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 6.5.0 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/shanav-tech/terraform-aws-labels.git | v1.0.0 |
+| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/Shanav-Technologies/terraform-aws-labels.git | v1.0.0 |
 
 ## Resources
 
 | Name | Type |
 |------|------|
-| [aws_s3_bucket.s3_default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) | resource |
-| [aws_s3_bucket_accelerate_configuration.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_accelerate_configuration) | resource |
-| [aws_s3_bucket_acl.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_acl) | resource |
-| [aws_s3_bucket_analytics_configuration.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_analytics_configuration) | resource |
-| [aws_s3_bucket_cors_configuration.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_cors_configuration) | resource |
-| [aws_s3_bucket_intelligent_tiering_configuration.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_intelligent_tiering_configuration) | resource |
-| [aws_s3_bucket_inventory.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_inventory) | resource |
-| [aws_s3_bucket_lifecycle_configuration.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_lifecycle_configuration) | resource |
-| [aws_s3_bucket_logging.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_logging) | resource |
-| [aws_s3_bucket_metric.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_metric) | resource |
-| [aws_s3_bucket_object_lock_configuration.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_object_lock_configuration) | resource |
-| [aws_s3_bucket_ownership_controls.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_ownership_controls) | resource |
-| [aws_s3_bucket_policy.block-http](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_policy) | resource |
-| [aws_s3_bucket_policy.s3_default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_policy) | resource |
-| [aws_s3_bucket_public_access_block.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_public_access_block) | resource |
-| [aws_s3_bucket_replication_configuration.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_replication_configuration) | resource |
-| [aws_s3_bucket_request_payment_configuration.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_request_payment_configuration) | resource |
-| [aws_s3_bucket_server_side_encryption_configuration.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_server_side_encryption_configuration) | resource |
-| [aws_s3_bucket_versioning.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_versioning) | resource |
-| [aws_s3_bucket_website_configuration.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_website_configuration) | resource |
-| [aws_vpc_endpoint.endpoints](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc_endpoint) | resource |
-| [aws_vpc_endpoint_service.s3](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/vpc_endpoint_service) | data source |
+| [aws_s3_bucket.s3_default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket) | resource |
+| [aws_s3_bucket_accelerate_configuration.example](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_accelerate_configuration) | resource |
+| [aws_s3_bucket_acl.default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_acl) | resource |
+| [aws_s3_bucket_analytics_configuration.default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_analytics_configuration) | resource |
+| [aws_s3_bucket_cors_configuration.example](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_cors_configuration) | resource |
+| [aws_s3_bucket_intelligent_tiering_configuration.this](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_intelligent_tiering_configuration) | resource |
+| [aws_s3_bucket_inventory.this](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_inventory) | resource |
+| [aws_s3_bucket_lifecycle_configuration.default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_lifecycle_configuration) | resource |
+| [aws_s3_bucket_logging.example](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_logging) | resource |
+| [aws_s3_bucket_metric.this](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_metric) | resource |
+| [aws_s3_bucket_object_lock_configuration.example](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_object_lock_configuration) | resource |
+| [aws_s3_bucket_ownership_controls.this](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_ownership_controls) | resource |
+| [aws_s3_bucket_policy.block-http](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_policy) | resource |
+| [aws_s3_bucket_policy.s3_default](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_policy) | resource |
+| [aws_s3_bucket_public_access_block.this](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_public_access_block) | resource |
+| [aws_s3_bucket_replication_configuration.this](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_replication_configuration) | resource |
+| [aws_s3_bucket_request_payment_configuration.example](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_request_payment_configuration) | resource |
+| [aws_s3_bucket_server_side_encryption_configuration.example](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_server_side_encryption_configuration) | resource |
+| [aws_s3_bucket_versioning.example](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_versioning) | resource |
+| [aws_s3_bucket_website_configuration.this](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/s3_bucket_website_configuration) | resource |
+| [aws_vpc_endpoint.endpoints](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/resources/vpc_endpoint) | resource |
+| [aws_vpc_endpoint_service.s3](https://registry.terraform.io/providers/hashicorp/aws/6.5.0/docs/data-sources/vpc_endpoint_service) | data source |
 
 ## Inputs
 
@@ -480,7 +480,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. `name`,`Environment`. | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
 | <a name="input_lifecycle_configuration_rules"></a> [lifecycle\_configuration\_rules](#input\_lifecycle\_configuration\_rules) | A list of lifecycle rules | <pre>list(object({<br>    id      = string<br>    prefix  = string<br>    enabled = bool<br>    tags    = map(string)<br><br>    enable_glacier_transition            = bool<br>    enable_deeparchive_transition        = bool<br>    enable_standard_ia_transition        = bool<br>    enable_current_object_expiration     = bool<br>    enable_noncurrent_version_expiration = bool<br><br>    abort_incomplete_multipart_upload_days         = number<br>    noncurrent_version_glacier_transition_days     = number<br>    noncurrent_version_deeparchive_transition_days = number<br>    noncurrent_version_expiration_days             = number<br><br>    standard_transition_days    = number<br>    glacier_transition_days     = number<br>    deeparchive_transition_days = number<br>    expiration_days             = number<br>  }))</pre> | `null` | no |
 | <a name="input_logging"></a> [logging](#input\_logging) | Logging Object to enable and disable logging | `bool` | `false` | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'shanav-tech'. | `string` | `"shanav-tech"` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'Shanav-Technologies'. | `string` | `"Shanav-Technologies"` | no |
 | <a name="input_metric_configuration"></a> [metric\_configuration](#input\_metric\_configuration) | Map containing bucket metric configuration. | `any` | `[]` | no |
 | <a name="input_mfa"></a> [mfa](#input\_mfa) | Optional, Required if versioning\_configuration mfa\_delete is enabled) Concatenation of the authentication device's serial number, a space, and the value that is displayed on your authentication device. | `string` | `null` | no |
 | <a name="input_mfa_delete"></a> [mfa\_delete](#input\_mfa\_delete) | Specifies whether MFA delete is enabled in the bucket versioning configuration. Valid values: Enabled or Disabled. | `string` | `"Disabled"` | no |
